@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types</title>
+</head>
+
+<body>
+    <!--Inline example-->
+    <button onclick="alert('This is Inline Javascript example')">Inline Click</button>
+    <!--Internal example-->
+    <button onclick="showmsg1()">Internal Click</button>
+    <script>
+        function showmsg1() {
+            alert("This is Internal Javascript example");
+        }
+    </script>
+    <!--External example-->
+    <button onclick="showmsg2()">External Click</button>
+    <button onclick="showmsg3()">External</button>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
