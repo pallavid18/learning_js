@@ -20,9 +20,43 @@
         document.write(lname);
 
         const pi = 3.14;
-        // const pi = 87.96;
+        // const pi = 87.96;j
         // pi = 47.36;
         document.write(pi);
+    </script>
+    <script>
+        //global scope 
+        var x = 100;
+        let y = 101;
+        const z = 102;
+        document.write("<br>");
+
+        function scopeExample() {
+            var x = 1; //function scope
+            let y = 2; //block scope
+            const z = 3; //block scope
+            if (true) //inside the function
+            {
+                var x = 10; //x reassign
+                let y = 20; //block scope 
+                const z = 30; // block scope
+                document.write(x); //10
+                document.write(y); //20
+                document.write(z); //30
+                document.write("<br>");
+            }
+            //outside function
+            document.write(x); //10
+            document.write(y); //2
+            document.write(z); //3
+            document.write("<br>");
+
+        }
+        scopeExample();
+        document.write(x); //100
+        document.write(y); //101
+        document.write(z); //102
+        document.write("<br>");
     </script>
 </body>
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Operates</title>
+</head>
+
+<body>
+    <!-- Arithmatic operator : =,+,-,++,--,/,*.%,**-->
+    <script>
+        var a = 10;
+        var b = 3;
+        c = a + b; //13
+        c++;
+        c--;
+        c++;
+        c++;
+        c++;
+        c--; //15
+        document.write(c);
+        document.write("<br>");
+    </script>
+    <script>
+        var a = 10;
+        var b = 3;
+        c = a ** b; //1000
+        c++;
+        c--;
+        c++;
+        c++;
+        c++;
+        c--; //1002
+        document.write(c);
+        document.write("<br>");
+    </script>
+    <!-- Assingment Operator : =,+=,-=, and with all arithmatic operators-->
+    <script>
+        var x = 10;
+        var y = 3;
+        x += y;
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br>");
+    </script>
+    <!-- Comparision Operator : !=,<=,>=,==,=== -->
+    <script>
+        var p = 13;
+        var q = "13";
+        if (p == q) {
+            document.write("true");
+        } else {
+            document.write("false");
+        }
+        document.write("<br>");
+
+        var p = 13; // it checks dt and value are same or !
+        var q = "13";
+        if (p === q) {
+            document.write("true");
+        } else {
+            document.write("false");
+        }
+        document.write("<br>");
+    </script>
+    <!-- Logical Operators : &&,||,! -->
+    <script>
+        var age = 12;
+        if (age >= 18 && age <= 100) {
+            document.write("Eligible For vote ");
+        } else {
+            document.write(" Not Eligible For vote ");
+        }
+        document.write("<br>");
+    </script>
+    <script>
+        var day = " Sunday";
+        if (day == "Sunday " || day == "Saturday") {
+            document.write("Weekend");
+        } else {
+            document.write("Weekdays");
+        }
+        document.write("<br>");
+
+        // var age=12;
+        // var eligibility
+    </script>
+</body>
+
+</html>

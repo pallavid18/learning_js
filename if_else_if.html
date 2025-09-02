@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If else</title>
+</head>
+
+<body>
+    <script>
+        var per = prompt("Enter ur percentage");
+        per = parseInt(per);
+        if (per >= 80 && per <= 100) {
+            document.write("Distinction");
+        } else if (per >= 60 && per <= 70) {
+            document.write("1st Class");
+        } else if (per >= 40 && per <= 59) {
+            document.write("2nd Class");
+        } else {
+            document.write("Fail");
+        }
+        document.write("<br>");
+    </script>
+
+
+
+    <script>
+        var month = prompt("Enter month number (1-12):");
+        month = parseInt(month);
+
+
+        if (month === 2) {
+            document.write("No of Days is : 28 or 29");
+        } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+            document.write("No of Days is : 30");
+
+        } else if (month === 1 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
+            document.write("No of Days is : 31");
+        } else {
+            days = "Invalid month number!";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
