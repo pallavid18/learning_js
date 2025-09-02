@@ -74,19 +74,23 @@
             document.write(" Not Eligible For vote ");
         }
         document.write("<br>");
-    </script>
-    <script>
-        var day = " Sunday";
-        if (day == "Sunday " || day == "Saturday") {
+
+        var day = "Saturday";
+
+        if (day === "Sunday" || day === "Saturday") {
             document.write("Weekend");
         } else {
             document.write("Weekdays");
         }
         document.write("<br>");
-
-        // var age=12;
-        // var eligibility
     </script>
+    <script>
+        //Ternery Operator 
+        var age = 20;
+        var eligibility = (age >= 18) ? "Eligible" : "Not Eligible";
+        document.write(eligibility);
+    </script>
+
 </body>
 
 </html>
