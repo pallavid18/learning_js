@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods of Array</title>
+</head>
+
+<body>
+    <script>
+        //update and delete
+        var a = ["Sun", "Moon", "Star", "Comet", "Stone", "Planet"];
+        document.write(a + "<br>");
+        a[2] = "Earth";
+        document.write(a + "<br>");
+        delete a[3];
+        document.write(a + "<br>");
+    </script>
+
+    <script>
+        //sort and reverse
+        var a = ["Sun", "Moon", "Star", "Comet", "Stone", "Planet", "Apple", "Cat", "Eat", "Zat"];
+        document.write(a + "<br>");
+        a.sort();
+        document.write(a + "<br>");
+        a.reverse();
+        document.write(a + "<br>");
+    </script>
+
+    <script>
+        //push and pop
+        var a = ["Sun", "Moon", "Star", "Comet", "Stone", "Planet", "Apple", "Cat", "Eat", "Zat"];
+        document.write(a + "<br>");
+        a.pop();
+        a.pop();
+        document.write(a + "<br>");
+        a.push("Aditya");
+        a.push("Ram");
+        a.push("Shyam");
+        document.write(a + "<br>");
+    </script>
+
+    <script>
+        //shift and Unshift
+        var a = ["Sun", "Moon", "Star", "Comet", "Stone", "Planet", "Apple", "Cat", "Eat", "Zat"];
+        document.write(a + "<br>");
+        a.shift();
+        a.shift();
+        document.write(a + "<br>");
+        a.unshift("Dog");
+        a.unshift("Krushna");
+        a.unshift("Radhe");
+        document.write(a + "<br>");
+    </script>
+
+    <script>
+        var a = ["Blue", "Green", "Pink"];
+        var b = ["Yellow", "Black", "Gray"];
+        var z = ["Oranage", "Purple", "Aqua"];
+        var c = a.concat(b);
+        document.write(c + "<br>");
+        var d = a.concat(b, z);
+        document.write(d + "<br>");
+        var e = d.join("/");
+        document.write(e + "<br>");
+    </script>
+</body>
+
+</html>
