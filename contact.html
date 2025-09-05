@@ -5,10 +5,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="css/boostrap_min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
+    <main>
+        <section class="mt-3 p-4">
+            <div class="container">
+                <div class="row">
+                    <h1 class=" mb-4">Contact Us</h1>
+                    <div class="col-md-6 border border-primary p-4">
+                        <!-- <a href="https://www.facebook.com/">
+                            <i class="bi bi-facebook social"></i>
+                        </a>
+                        <a href="https://www.youtube.com/">
+                            <i class="bi bi-youtube social"></i>
+                        </a> -->
+                        <form id="contactForm" class="p-4 border rounded" onsubmit="return validate()">
+                            <section>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
 
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                                <span class="text-danger" id="nameError"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                                <span class="text-danger" id="emailError"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <!-- <label for="floatingPassword">Password</label> -->
+                                                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                                <span class="text-danger" id="passwordError"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <!-- <label for="floatingPassword">Password</label> -->
+                                                <label for="exampleFormControlInput1" class="form-label">Confirm password</label>
+                                                <input type="password" class="form-control" id="confirmPassword" placeholder="Password">
+                                                <span class="text-danger" id="confirmPasswordError"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Phone No</label>
+                                                <input type="number" class="form-control" id="phone" placeholder="Phone">
+                                                <span class="text-danger" id="phoneError"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="exampleFormControlInput1" class="form-label">City</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select city</option>
+                                                <option value="1">Pune</option>
+                                                <option value="2">Nashik</option>
+                                                <option value="3">Latur</option>
+                                                <option value="4">Solapur</option>
+                                                <option value="3">Khed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Zip code</label>
+                                                <input type="number" class="form-control" id="zip" placeholder="Enter zip">
+                                                <span class="text-danger" id="zipError"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="exampleFormControlInput1" class="form-label">Country</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select Country</option>
+                                                <option value="1">India</option>
+                                                <option value="2">USA</option>
+                                                <option value="3">London</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="exampleFormControlInput1" class="form-label" id="gender">Gender</label>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender" id="male">
+                                                <span class="text-danger" id="maleError"></span>
+                                                <label class="form-check-label" for="gender1">Male</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender" id="female">
+                                                <span class="text-danger" id="femaleError"></span>
+                                                <label class="form-check-label" for="gender2">Female</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gender" id="other">
+                                                <span class="text-danger" id="otherError"></span>
+                                                <label class="form-check-label" for="gender2">Other</label>
+                                            </div>
+
+                                        </div>
+                                        <span class="text-danger" id="genderError"></span>
+
+                                    </div>
+                                </div>
+
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                                <textarea class="form-control" id="message" rows="3">Enter Message</textarea>
+                                                <span class="text-danger" id="messageError"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="d-grid gap-2 col-6 mx-auto">
+                                                <button type="submit" class="btn btn-success text-center">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                    <div class="col-md-6 me-0 p-4">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script>
+        function validate() {
+            //Get form 
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            const zip = document.getElementById("zip").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked');
+
+            //Error spans
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const phoneError = document.getElementById("phoneError");
+            const passwordError = document.getElementById("passwordError");
+            const confirmPasswordError = document.getElementById("confirmPasswordError");
+            const zipError = document.getElementById("zipError");
+            const messageError = document.getElementById("messageError");
+            const genderError = document.getElementById("genderError");
+
+
+            //clear previous error msg
+            nameError.textContent = "";
+            emailError.textContent = "";
+            phoneError.textContent = "";
+            passwordError.textContent = "";
+            confirmPasswordError.textContent = "";
+            messageError.textContent = "";
+            zipError.textContent = "";
+            genderError.textContent = "";
+
+            let isvalid = true;
+
+            //validate fields
+            //name
+            if (name === "") {
+                nameError.textContent = "Please enter your name";
+                isvalid = false;
+            } else if (name.length < 3) {
+                nameError.textContent = "Please enter at least 3 character";
+                isvalid = false;
+            }
+
+            //email
+            if (email === "") {
+                emailError.textContent = "Please enter your email";
+                isvalid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.textContent = "Please enter valid email";
+                isvalid = false;
+            }
+            //password validation
+            const passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/;
+            if (password === "") {
+                passwordError.textContent = "Please enter a password";
+                isvalid = false;
+            } else if (!passwordPattern.test(password)) {
+                nameError.textContent = "Please must be at least 6 characters , include a number & special character";
+                isvalid = false;
+            }
+
+            //confirm password
+            if (confirmPassword === "") {
+                confirmPasswordError.textContent = "Please confirm your  password";
+                isvalid = false;
+            } else if (confirmPassword !== password) {
+                nameError.textContent = "Password donot match";
+                isvalid = false;
+            }
+
+            //mobile
+            if (phone === "") {
+                phoneError.textContent = "Please enter your phone no";
+                isvalid = false;
+            } else if (!/^\d{10}$/.test(mobile)) {
+                phoneError.textContent = " Please enter valid 10 digit moblie number";
+                isvalid = false;
+            }
+
+            //meassage
+            if (message === "") {
+                messageError.textContent = "Please enter your message";
+                isvalid = false;
+            }
+            //gender
+            if (!gender) {
+                genderError.textContent = "Please enter your gender";
+                isvalid = false;
+            }
+            //zip
+            if (zip === "") {
+                zipError.textContent = "Please enter your zip code";
+                isvalid = false;
+            }
+
+            return isvalid;
+        }
+    </script>
 </body>
 
 </html>
